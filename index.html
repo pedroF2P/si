@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon"
+    type="image/svg+xml"
+    href="/vite.svg" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0" />
+  <title>Weather - Bootstrap
+  </title>
+</head>
+
+<body>
+  <div id="app">
+    <div
+      class="container mt-5">
+      <input type="text"
+        class='form-control my-3'>
+      <button
+        class='btn btn-dark'>Añadir
+        ciudad</button>
+      <div
+        id='container-cards'
+        class="row mt-5">
+      </div>
+    </div>
+  </div>
+
+
+  <template
+    id='template-cards'>
+      <div
+        class="col-12 col-md-3">
+        <div
+          class="card rounded-4 overflow-hidden shadow">
+          <div
+            class="card-header p-4"
+            style='background-color: #b9d7eb;'>
+            <div class="row">
+              <div
+                class="col-4">
+                <img
+                id='condition-icon'
+                  src="https://cdn.weatherapi.com/weather/64x64/day/116.png"
+                  class="card-img-top m-1"
+                  alt="..."
+                  style='width: 90px;'>
+              </div>
+              <div
+                class="col-8 text-end">
+                <h6 id='condition-text'
+                  style='font-size: 1.1rem;'>
+                  Parcialmente
+                  nublado
+                </h6>
+                <h3 id='current-temp'
+                  class='fs-1 fw-light'>
+                  19°</h3>
+                <p class=''
+                  style='font-size: .8rem; '>
+                  <span id="location-name">Campeche</span>,
+                  <span id="location-region">Campeche</span>,
+                  <span id="location-country">Mexico</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card-body px-4 py-2">
+            <div
+              class="row py-1 px-2">
+              <div
+                class="col-12 col-sm-6">
+                Wind</div>
+              <div id='wind'
+                class="col-sm-6 text-end">
+                N 18 kph
+              </div>
+            </div>
+            <div
+              class="row py-1 px-2">
+              <div
+                class="col-12 col-sm-6">
+                Humidity
+              </div>
+              <div
+                id='humidity'
+                class="col-sm-6 text-end">
+                54%</div>
+            </div>
+            <div
+              class="row py-1 px-2">
+              <div
+                class="col-12 col-sm-6">
+                Wind</div>
+              <div
+                id='pressure'
+                class="col-sm-6 text-end">
+                N 18 kph
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </template>
+
+
+  <script type="module"
+    src="/main.js"></script>
+</body>
+
+</html>
